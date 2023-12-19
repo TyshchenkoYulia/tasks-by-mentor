@@ -7,20 +7,45 @@
 //скасування в prompt
 
 
-function checkNumber() {
-    let number = prompt("Hello, add number > 100 !!!")
-    console.log(number)
+// function checkNumber() {
+//     let number = prompt("Hello, add number > 100 !!!")
+//     console.log(number)
 
 
-     while(number < 100){
-        number = prompt("Add number > 100 !!!")
-     }
+//      while(number < 100){
+//         number = prompt("Add number > 100 !!!")
+//      }
 
-}
-checkNumber()
+// }
+// checkNumber()
 
-
+// =========================================================================================================
 
 // У змінній min лежить число від 0 до 59.
 // Визначте, в яку чверть години потрапляє
 // це число(у першу, другу, третю чи четверту).
+
+
+
+
+// ========================================================================================================
+
+
+
+// let fruits
+// let order = fruits
+let fruits = ["apple", "peach", "pear", "banana"];
+   fruits[1] = "kiwi";
+function getOrderQuantity(order) {
+
+
+   
+   
+    
+   
+ }
+// console.log(getOrderQuantity)
+
+ 
+ 
+ console.log(fruits);
