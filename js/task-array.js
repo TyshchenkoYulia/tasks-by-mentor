@@ -35,20 +35,20 @@
 // перший елемент - це індекс останнього елементу у масиві array
 // другий елемент - це значення останнього елементу у масиві array
 
-function getLastElementMeta(array) {
-   const lastIndex = array.length - 1;
-   const lastElement = array[lastIndex];
-   return [lastIndex, lastElement];
+// function getLastElementMeta(array) {
+//    const lastIndex = array.length - 1;
+//    const lastElement = array[lastIndex];
+//    return [lastIndex, lastElement];
    
- }
+//  }
 //   ========================================================================================
 // Функція getLength(array) очікує один параметр array - масив довільних значень. Доповни код функції так,
 //  щоб вона перетворювала масив у рядок, без роздільників, і повертала кількість символів в отриманому рядку.
 
-function getLength(array) {
-   const joinLendth = array.join("");
-   return joinLendth.length;
- }
+// function getLength(array) {
+//    const joinLendth = array.join("");
+//    return joinLendth.length;
+//  }
 // =======================================================================================
 // Сервісу гравірування прикрас потрібна функція, яка б автоматично рахувала ціну гравірування, 
 // залежно від кількості слів і ціни за слово.
@@ -59,13 +59,13 @@ function getLength(array) {
 
 // Доповни тіло функції так, щоб вона повертала загальну вартість гравірування усіх слів в рядку.
 
-function calculateEngravingPrice(message, pricePerWord) {
-   const word = message.split(" ");
-   const wordLetter = word.length;
-   const totalPrice = wordLetter * pricePerWord;
-   return totalPrice;
+// function calculateEngravingPrice(message, pricePerWord) {
+//    const word = message.split(" ");
+//    const wordLetter = word.length;
+//    const totalPrice = wordLetter * pricePerWord;
+//    return totalPrice;
    
- }
+//  }
 //  ====================================================================================================
 
 // Доповни код таким чином, щоб змінні містили часткові копії вихідного масиву fruits.
@@ -74,12 +74,12 @@ function calculateEngravingPrice(message, pricePerWord) {
 // nonExtremeEls - масив з усіх елементів, крім першого та останнього
 // lastThreeEls - масив із трьох останніх елементів
 
-const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
-const firstTwoEls = fruits.slice(0, 2);
-const nonExtremeEls = fruits.slice(1, -1) ;
-const lastThreeEls = fruits.slice (-3);
-// ===================================================================================================
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, -1) ;
+// const lastThreeEls = fruits.slice (-3);
+// // ===================================================================================================
 
 // Функція getSlice(array, value) приймає два параметра:
 
@@ -90,16 +90,16 @@ const lastThreeEls = fruits.slice (-3);
 // порожній масив, якщо в array немає елемента зі значенням value
 // підмасив, що починається з початку array і до елемента зі значенням value включно, якщо такий елемент є в array
 
-function getSlice(array, value) {
+// function getSlice(array, value) {
   
-   const index = array.indexOf(value);
+//    const index = array.indexOf(value);
    
-   if (index === -1){
-     return []
-   } else {
-     return array.slice(0, index + 1)
-   }
- }
+//    if (index === -1){
+//      return []
+//    } else {
+//      return array.slice(0, index + 1)
+//    }
+//  }
 //  ===================================================================================================
 
 // Функція createArrayOfNumbers(min, max) приймає два параметра:
@@ -114,17 +114,17 @@ function getSlice(array, value) {
 // Функція calculateTotalPrice(order) приймає один параметр order - масив чисел. Доповни функцію так,
 //  щоб вона повертала загальну суму елементів з масиву order.
 
-function calculateTotalPrice(order) {
-  let total = 0;
-  for (let i = 0; i < order.length; i += 1) {
-    total += order[i];
-  }
-  return total
-}
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   for (let i = 0; i < order.length; i += 1) {
+//     total += order[i];
+//   }
+//   return total
+// }
 
-console.log(calculateTotalPrice([12, 85, 37, 4]))
-console.log(calculateTotalPrice([164, 48, 291]))
-console.log(calculateTotalPrice([412, 371, 94, 63, 176]))
+// console.log(calculateTotalPrice([12, 85, 37, 4]))
+// console.log(calculateTotalPrice([164, 48, 291]))
+// console.log(calculateTotalPrice([412, 371, 94, 63, 176]))
 
 // ==========================================================================================
 
@@ -133,15 +133,15 @@ console.log(calculateTotalPrice([412, 371, 94, 63, 176]))
 // Якщо жодного парного числа немає, то масив має бути пустим. 
 // Парним вважається число, яке ділиться на 2 без остачі (10 % 2 === 0). Використовуй цикл for.
 
-function getEvenNumbers(start, end) {
-  const evenNumbers = [];
-  for (let i = start; i <= end; i++) {
-    if (i % 2 === 0) {
-     evenNumbers.push(i);
-    } 
-  }
-return evenNumbers;
-}
+// function getEvenNumbers(start, end) {
+//   const evenNumbers = [];
+//   for (let i = start; i <= end; i++) {
+//     if (i % 2 === 0) {
+//      evenNumbers.push(i);
+//     } 
+//   }
+// return evenNumbers;
+// }
 // =========================================================================================
 
 // Функція getCommonElements(array1, array2), приймає два масиви (array1 та array2) 
@@ -155,28 +155,28 @@ return evenNumbers;
 // Якщо він існує, то додай елемент до нового масиву.
 // Поверни наповнений масив спільних елементів як результат роботи функції.
 
-function getCommonElements(array1, array2) {
-  let array3 = [];
-  for (let i = 0; i < array1.length; i ++) {
-    if (array2.includes(array1[i])) {
-      array3.push(array1[i]);
-    }
+// function getCommonElements(array1, array2) {
+//   let array3 = [];
+//   for (let i = 0; i < array1.length; i ++) {
+//     if (array2.includes(array1[i])) {
+//       array3.push(array1[i]);
+//     }
     
-  }
-  return array3;
-}
-// ==============================================================================================================
+//   }
+//   return array3;
+// }
+// // ==============================================================================================================
 // Доповни код функції calculateTotalPrice(order) так, щоб вона повертала загальну суму чисел в масиві order. 
 // Використай цикл for...of для перебору масиву.
 
-function calculateTotalPrice(order) {
-  let totalNumber = 0;
-  for (let number of order){
-    totalNumber += number;
-  }
+// function calculateTotalPrice(order) {
+//   let totalNumber = 0;
+//   for (let number of order){
+//     totalNumber += number;
+//   }
     
-  return totalNumber;
-}
+//   return totalNumber;
+// }
 
 // ==================================================================================================
 // Функція createReversedArray() може приймати довільну кількість аргументів.
@@ -185,10 +185,10 @@ function calculateTotalPrice(order) {
 //  функція має повернути масив [3, 2, 1]. Використовуй цикл або метод масиву toReversed(), 
 // який застосовується до масиву і результатом роботи повертає новий масив з елементами у зворотньому порядку.
 
-function createReversedArray(...args) {
-  const reversedArray = args.reverse(); 
-  return reversedArray; 
-}
+// function createReversedArray(...args) {
+//   const reversedArray = args.reverse(); 
+//   return reversedArray; 
+// }
 
 // =================================================================================================
 // Функція calculateTax(amount, taxRate) оголошує два параметри:
@@ -197,8 +197,8 @@ function createReversedArray(...args) {
 // taxRate - число, податкова ставка. Необов'язковий параметр. За замовчуванням його значення має бути 0.2.
 // Доповни код функції так, щоб вона повертала суму податку - результат множення суми на податкову ставку.
 
-function calculateTax(amount, taxRate = 0.2) {
-  let totalTax = amount * taxRate;
-  return totalTax;
-}
+// function calculateTax(amount, taxRate = 0.2) {
+//   let totalTax = amount * taxRate;
+//   return totalTax;
+// }
 // =================================================================================================
