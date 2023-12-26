@@ -84,14 +84,16 @@
 // Доповни код функції countTotalSalary(salaries) так, 
 // щоб вона повертала загальну суму зарплат всіх співробітників.
 
-function countTotalSalary(salaries) {
-    let totalSalary = 0;
-    const valuesSalary = Object.values(salaries);
-    for (let salary of valuesSalary) {
-        totalSalary += salary;
-    }
-    return totalSalary;
-  }
-console.log(countTotalSalary({}));  
-console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));  
-console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));  
+// function countTotalSalary(salaries) {
+//     let totalSalary = 0;
+//     const valuesSalary = Object.values(salaries);
+//     for (let salary of valuesSalary) {
+//         totalSalary += salary;
+//     }
+//     return totalSalary;
+//   }
+// console.log(countTotalSalary({}));  
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));  
+// console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 }));  
+// ==========================================================================================
+
