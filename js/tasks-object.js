@@ -217,3 +217,26 @@
 //   console.log(calculateTotalPrice("Grip"));
 //   console.log(calculateTotalPrice("Scanner"));
 //   =====================================================================================================
+
+
+                                        // МЕТОДИ ОБ'ЄКТІВ
+// Оголоси об'єкт atTheOldToad з наступними властивостями:
+
+// potions — масив, де будуть зберігатися зілля. Нехай зараз він буде порожнім
+// getPotions() — метод, який повертає рядок "List of all available potions"
+// addPotion(potionName) — метод, який повертає рядок "Adding <potionName>",
+//  де potionName — це значення параметра potionName
+
+const atTheOldToad = {
+    potions: [],
+    getPotions() {
+      return "List of all available potions";
+    },
+    addPotion(potionName) {
+      return `Adding ${potionName}`;
+    },
+  }
+
+console.log(atTheOldToad.getPotions());
+console.log(atTheOldToad.addPotion("Invisibility"));
+console.log(atTheOldToad.addPotion("Power potion"));
