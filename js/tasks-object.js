@@ -227,16 +227,147 @@
 // addPotion(potionName) — метод, який повертає рядок "Adding <potionName>",
 //  де potionName — це значення параметра potionName
 
-const atTheOldToad = {
-    potions: [],
-    getPotions() {
-      return "List of all available potions";
-    },
-    addPotion(potionName) {
-      return `Adding ${potionName}`;
-    },
-  }
+// const atTheOldToad = {
+//     potions: [],
+//     getPotions() {
+//       return "List of all available potions";
+//     },
+//     addPotion(potionName) {
+//       return `Adding ${potionName}`;
+//     },
+//   }
 
-console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion("Invisibility"));
-console.log(atTheOldToad.addPotion("Power potion"));
+// console.log(atTheOldToad.getPotions());
+// console.log(atTheOldToad.addPotion("Invisibility"));
+// console.log(atTheOldToad.addPotion("Power potion"));
+// ===================================================================================================
+
+// Замовниця хоче, щоб кожне зілля було представлено не тільки ім'ям, але й ціною. 
+// Тому зараз у властивості potions буде зберігатися масив об'єктів з властивостями name та price.
+
+// Об'єкт atTheOldToad має наступні властивості:
+
+// potions — масив рядків, з назвами зілль
+// getPotions() — метод, який повертає значення властивості potions
+// addPotion() — метод, який приймає параметр об'єкт нового зілля newPotion і 
+// додає його в кінець масиву у властивості potions.
+// Додай метод getTotalPrice(), який має повертати загальну вартість усіх зілль з властивості potions.
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   addPotion(newPotion) {
+//     this.potions.push(newPotion);
+//   },
+//   getTotalPrice() {
+//     let totalPrice = 0;
+//     for (const potion of this.potions) {
+//       totalPrice += potion.price
+//     }
+//     return totalPrice;
+//   },
+// }
+// atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: "Invisibility", price: 620 });
+// atTheOldToad.addPotion({ name: "Power potion", price: 270 });
+
+// console.log(atTheOldToad.getTotalPrice());
+// =====================================================================================
+// Об'єкт atTheOldToad має наступні властивості:
+
+// potions — масив об'єктів зілль
+// getPotions() — метод, який повертає значення властивості potions
+// updatePotionName() — метод, який приймає два параметра рядків oldName і newName
+// Доповни метод updatePotionName(oldName, newName) таким чином, 
+// щоб він оновлював назву зілля з oldName на newName в масиві зілля у властивості potions.
+
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+//   getPotions() {
+//     return this.potions;
+//   },
+//   updatePotionName(oldName, newName) {
+//     for(const potion of this.potions) {
+//       if (potion.name === oldName){
+//         potion.name = newName
+//       }
+//     }
+//   },
+// };
+
+// console.log(atTheOldToad.updatePotionName("Stone skin", "Invisibility"));
+// console.log(atTheOldToad.updatePotionName("Speed potion", "Polymorth"));
+
+// =========================================================================================
+
+// ==================================== Spred and Rest ====================================
+
+
+// Використовуючи синтаксис залишкових параметрів, 
+// доповни код функції add() так, щоб вона приймала 
+// будь-яку кількість аргументів у параметр args і повертала їхню суму.
+
+// function add(...args) {
+//   let totalArgs = 0;
+//   for (const arg of args) {
+//     totalArgs += arg;
+//   }
+//   return totalArgs;
+
+// }
+
+// console.log(add(15, 27));
+// console.log(add(12, 4, 11, 48));
+// console.log(add(32, 6, 13, 19, 8));
+// =========================================================================================
+// Функція getExtremeScores(scores) приймає масив оцінок (чисел) у параметрі scores.
+
+// Доповни код функції так, щоб вона повертала об'єкт із двома властивостями:
+
+// Властивість best має містити найбільше число з масиву scores
+// Властивість worst має містити найменше число з масиву scores.
+// Використовуй оператор (...spread) і методи Math.max() і Math.min().
+
+// function getExtremeScores(scores) {
+  
+//   return {
+//     best: Math.max(...scores),
+//     worst: Math.min(...scores),
+//   }
+// }
+
+// console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+// console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+// console.log();
+// console.log();
+// -==========================================================================================
+
+// У змінних firstGroupScores, secondGroupScores і thirdGroupScores 
+// зберігаються результати тестування окремих груп. 
+// Використовуючи розпилення, доповни код таким чином, щоб:
+
+// У змінній allScores зберігався масив всіх результатів від першої до третьої групи включно.
+// У змінній bestScore був найвищий загальний бал.
+// У змінній worstScore був найнижчий загальний бал.
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+// ============================================================================================
