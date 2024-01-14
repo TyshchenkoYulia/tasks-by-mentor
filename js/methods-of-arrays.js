@@ -1,3 +1,6 @@
+'use strict'
+
+
 
 // Функція makePizza повертає рядок з повідомленням клієнту.
 
@@ -941,43 +944,67 @@
 
 // makeProduct("iphone", 1000, showProduct);
 // =====================================================================================================
-// const users = [
-//   {
-//     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
-//     name: "Moore Hensley",
-//     email: "moorehensley@indexia.com",
-//     eyeColor: "blue",
-//     friends: ["Sharron Pace"],
-//     isActive: false,
-//     balance: 2811,
-//     skills: ["ipsum", "lorem"],
-//     gender: "male",
-//     age: 37,
-//   },
-//   {
-//     id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
-//     name: "Sharlene Bush",
-//     email: "sharlenebush@tubesys.com",
-//     eyeColor: "blue",
-//     friends: ["Briana Decker", "Sharron Pace"],
-//     isActive: true,
-//     balance: 3821,
-//     skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
-//     gender: "female",
-//     age: 34,
-//   },
-//   {
-//     id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
-//     name: "Ross Vazquez",
-//     email: "rossvazquez@xinware.com",
-//     eyeColor: "green",
-//     friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
-//     isActive: false,
-//     balance: 3793,
-//     skills: ["nulla", "anim", "proident", "ipsum", "elit"],
-//     gender: "male",
-//     age: 24,
-//   },]
+const users = [
+  {
+    id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
+    name: "Moore Hensley",
+    email: "moorehensley@indexia.com",
+    eyeColor: "blue",
+    friends: ["Sharron Pace"],
+    isActive: false,
+    balance: 2811,
+    skills: ["ipsum", "lorem"],
+    gender: "male",
+    age: 37,
+  },
+  {
+    id: "7a3cbd18-57a1-4534-8e12-1caad921bda1",
+    name: "Sharlene Bush",
+    email: "sharlenebush@tubesys.com",
+    eyeColor: "blue",
+    friends: ["Briana Decker", "Sharron Pace"],
+    isActive: true,
+    balance: 3821,
+    skills: ["tempor", "mollit", "commodo", "veniam", "laborum"],
+    gender: "female",
+    age: 34,
+  },
+  {
+    id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+    name: "Ross Vazquez",
+    email: "rossvazquez@xinware.com",
+    eyeColor: "green",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+    gender: "male",
+    age: 24,
+  },
+  {
+    id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+    name: "Rojer Vazquez",
+    email: "ross@xinware.com",
+    eyeColor: "brown",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+    gender: "famale",
+    age: 24,
+  },
+  {
+    id: "88beb2f3-e4c2-49f3-a0a0-ecf957a95af3",
+    name: "Rosshsdjh Vazquez",
+    email: "ross1988@xinware.com",
+    eyeColor: "grey",
+    friends: ["Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner"],
+    isActive: false,
+    balance: 3793,
+    skills: ["nulla", "anim", "proident", "ipsum", "elit"],
+    gender: "male",
+    age: 45,
+  },]
 
 //   // Отримати масив імен користувачів за статтю (поле gender)
 // const gender = "male";
@@ -994,15 +1021,37 @@
 
 // Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
 
+// const eyesByUsers = (users, color) => 
+//     users.filter(user => user.eyeColor === color)
 
+// console.log(eyesByUsers(users, "green"))
+// console.log(eyesByUsers(users, "blue"))
+// console.log(eyesByUsers(users, "grey"))
+// console.log(eyesByUsers(users, "brown"))
+// ============================================================================================================
 // Отримати масив тільки неактивних користувачів (поле є активним).
 
+// const notActiveUsers = users.filter( user => user.isActive === false);
+    
+// console.log(notActiveUsers);
 
+// ======================================================================================
 // Отримати користувача (не масив) по email (поле email, він унікальний).
 
-// Отримати масив користувачів віком від min до max
-// console.log (getUsersWithAge (users, 20, 30));
+// const getUsersNameByEmail  =
+//      users.find(user => user.email === "ross@xinware.com");
 
+// console.log(getUsersNameByEmail);
+// =====================================================================================
+// Отримати масив користувачів віком від min до max
+const minAge = 20;
+const maxAge = 30;
+const getUsersByAge = users.filter(user => 
+    user.age >= minAge && user.age <= maxAge);
+
+
+console.log(getUsersWithAge);
+// ======================================================================================
 // Отримати загальну суму балансу (поле balance) всіх користувачів.
 // console.log(calculateTotalBalance(users));
 
