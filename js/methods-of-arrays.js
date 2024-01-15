@@ -1044,13 +1044,13 @@ const users = [
 // console.log(getUsersNameByEmail);
 // =====================================================================================
 // Отримати масив користувачів віком від min до max
-const minAge = 20;
-const maxAge = 30;
-const getUsersByAge = users.filter(user => 
-    user.age >= minAge && user.age <= maxAge);
+// const minAge = 20;
+// const maxAge = 30;
+// const getUsersByAge = users.filter(user => 
+//     user.age >= minAge && user.age <= maxAge);
 
 
-console.log(getUsersWithAge);
+// console.log(getUsersWithAge);
 // ======================================================================================
 // Отримати загальну суму балансу (поле balance) всіх користувачів.
 // console.log(calculateTotalBalance(users));
